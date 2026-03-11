@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Polvo Hub — Full Prototype</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="campusmap.css">
+</head>
+
+<body>
+
+    <div class="page-title">
+        <h1>🐙 Polvo Hub — Full Prototype</h1>
+        <p>5 screens · Home · Map · Cantina · AI Assistant · NotebookLM Study</p>
+    </div>
+
+    <div class="screens-row">
+
+        <!-- ===== SCREEN 2: MAP ===== -->
+        <div class="phone-wrapper">
+            <div class="screen-label">② Campus Map</div>
+            <div class="phone">
+                <div class="status-bar"><span class="time">09:41</span><span>●●● WiFi 🔋</span></div>
+                <div class="map-wrap">
+                    <div class="map-grid"></div>
+                    <div class="road-h" style="top:110px;"></div>
+                    <div class="road-h" style="top:205px;"></div>
+                    <div class="road-v" style="left:94px;"></div>
+                    <div class="road-v" style="left:196px;"></div>
+                    <div class="bldg" style="left:14px;top:32px;width:66px;height:68px;">Edif. A<br><span
+                            style="font-size:7px;color:#6b7a99">Admin</span></div>
+                    <div class="bldg sel" style="left:108px;top:32px;width:74px;height:68px;">Edif. B<br><span
+                            style="font-size:7px;color:rgba(255,255,255,0.7)">Sciences</span></div>
+                    <div class="bldg" style="left:210px;top:32px;width:74px;height:50px;">Edif. C<br><span
+                            style="font-size:7px;color:#6b7a99">Arts</span></div>
+                    <div class="bldg lib" style="left:14px;top:128px;width:66px;height:62px;">📚<br><span
+                            style="font-size:7px;">Library</span></div>
+                    <div class="bldg caf" style="left:210px;top:128px;width:74px;height:62px;">🍽️<br><span
+                            style="font-size:7px;">Cantina</span></div>
+                    <div class="bldg" style="left:108px;top:128px;width:74px;height:62px;">Edif. D<br><span
+                            style="font-size:7px;color:#6b7a99">Sports</span></div>
+                    <div class="bldg" style="left:14px;top:222px;width:66px;height:58px;">Lab<br><span
+                            style="font-size:7px;color:#6b7a99">Research</span></div>
+                    <div class="bldg" style="left:108px;top:222px;width:176px;height:58px;">Edif. E · Auditorium</div>
+                    <div class="map-pin" style="left:140px;top:50px;"></div>
+                    <div class="pin-label" style="left:114px;top:36px;">B204 →</div>
+                    <div class="map-search"><span style="color:#9ca3af;font-size:12px;">🔍</span><input type="text"
+                            placeholder="Search room..." value="B204"></div>
+                    <div class="map-ctrl">
+                        <div class="map-btn">+</div>
+                        <div class="map-btn">−</div>
+                        <div class="map-btn">📍</div>
+                    </div>
+                </div>
+                <div class="room-panel">
+                    <div class="room-panel-title">Edifício B — Rooms</div>
+                    <div class="room-grid">
+                        <div class="room-chip free">B101<div class="room-sub">Free</div>
+                        </div>
+                        <div class="room-chip occ">B102<div class="room-sub">Occupied</div>
+                        </div>
+                        <div class="room-chip free">B103<div class="room-sub">Free</div>
+                        </div>
+                        <div class="room-chip occ">B201<div class="room-sub">Occupied</div>
+                        </div>
+                        <div class="room-chip mine">B204<div class="room-sub">Your class</div>
+                        </div>
+                        <div class="room-chip occ">B205<div class="room-sub">Occupied</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-nav">
+                    <a class="nav-item" href="../timetable/TimetableScreen.html">
+                        <div class="nav-icon">🏠</div>
+                        <div class="nav-label">Home</div>
+                    </a>
+                    <a class="nav-item" href="../campusScreen/campusmap.html">
+                        <div class="nav-icon">🗺️</div>
+                        <div class="nav-label">Map</div>
+                    </a>
+                    <a class="nav-item" href="../servicepage/servicepage.html">
+                        <div class="nav-icon">🏛️</div>
+                        <div class="nav-label">Service</div>
+                    </a>
+                    <a class="nav-item" href="../polvoassistant/polvoassistant.html">
+                        <div class="nav-icon">🤖</div>
+                        <div class="nav-label">Assistant</div>
+                    </a>
+                    <a class="nav-item active" href="../studyhub/studyhub.html">
+                        <div class="nav-icon">📖</div>
+                        <div class="nav-label">Study</div>
+                    </a>
+                </div>
+            </div>
+            <div class="page-dots">
+                <div class="dot"></div>
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+    </div><!-- /screens-row -->
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Polvo Hub — Full Prototype</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="studyhub.css">
+</head>
+
+<body>
+
+    <div class="page-title">
+        <h1>🐙 Polvo Hub — Full Prototype</h1>
+        <p>5 screens · Home · Map · Cantina · AI Assistant · NotebookLM Study</p>
+    </div>
+
+    <div class="screens-row">
+
+        <!-- ===== SCREEN 5: NOTEBOOK LM ===== -->
+        <div class="phone-wrapper">
+            <div class="screen-label">⑤ Study Hub (NotebookLM)</div>
+            <div class="phone">
+                <div class="status-bar" style="background:#1e1b4b;"><span class="time">09:41</span><span>●●● WiFi
+                        🔋</span></div>
+                <div class="nb-header">
+                    <div class="nb-header-top">
+                        <div class="nb-logo">
+                            <div class="nb-logo-icon">📓</div>
+                            <div class="nb-logo-text">polvo<span>study</span></div>
+                        </div>
+                        <div style="font-size:18px;cursor:pointer;">＋</div>
+                    </div>
+                    <div class="nb-title">Study Hub</div>
+                    <div class="nb-sub">Your AI-powered course notebook</div>
+                    <div class="nb-tabs">
+                        <div class="nb-tab active">Sources</div>
+                        <div class="nb-tab">Ask AI</div>
+                        <div class="nb-tab">Podcast</div>
+                    </div>
+                </div>
+
+                <div class="nb-content">
+                    <div class="section-title" style="margin-bottom:10px;">Uploaded Sources <a href="#"
+                            style="color:#a78bfa;">+ Add</a></div>
+
+                    <div class="source-card">
+                        <div class="source-icon pdf">📄</div>
+                        <div class="source-info">
+                            <div class="source-name">Cálculo II — Capítulo 4.pdf</div>
+                            <div class="source-meta">Uploaded today · 24 pages</div>
+                            <div class="source-tags"><span class="s-tag">Integrals</span><span
+                                    class="s-tag">Derivatives</span></div>
+                        </div>
+                    </div>
+
+                    <div class="source-card">
+                        <div class="source-icon slide">📊</div>
+                        <div class="source-info">
+                            <div class="source-name">Eng. Software — Slides W5.pptx</div>
+                            <div class="source-meta">Uploaded yesterday · 32 slides</div>
+                            <div class="source-tags"><span class="s-tag">UML</span><span class="s-tag">Agile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="source-card">
+                        <div class="source-icon note">✏️</div>
+                        <div class="source-info">
+                            <div class="source-name">My notes — Física Aula 3</div>
+                            <div class="source-meta">Created 2 days ago · Handwritten</div>
+                            <div class="source-tags"><span class="s-tag">Optics</span><span class="s-tag">Waves</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nb-ask-title">Suggested Questions</div>
+                    <div class="nb-question">
+                        <div class="nb-q-icon">💡</div>
+                        <div class="nb-q-text">Summarise Chapter 4 of Cálculo II in 5 bullet points</div>
+                    </div>
+                    <div class="nb-question">
+                        <div class="nb-q-icon">🧪</div>
+                        <div class="nb-q-text">What are the key UML diagrams from this week?</div>
+                    </div>
+
+                    <div class="nb-answer">
+                        <div class="nb-answer-label">🤖 AI Answer</div>
+                        <div class="nb-answer-text">Chapter 4 covers <strong>definite integrals</strong> and the
+                            Fundamental Theorem of Calculus. Key topics include Riemann sums, integration by
+                            substitution, and applications to area under curves.</div>
+                        <div class="nb-answer-source">📄 Source: Cálculo II — Capítulo 4.pdf, p. 3–7</div>
+                    </div>
+
+                    <div class="nb-podcast-card">
+                        <div class="nb-podcast-title">🎙️ AI Podcast — Cálculo II</div>
+                        <div class="nb-podcast-sub">Auto-generated · 8 min · 2 AI voices</div>
+                        <div class="podcast-player">
+                            <div class="play-btn">▶</div>
+                            <div class="podcast-bar">
+                                <div class="podcast-track">
+                                    <div class="podcast-prog"></div>
+                                </div>
+                                <div class="podcast-times"><span>2:48</span><span>8:05</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-nav">
+                    <a class="nav-item" href="../timetable/TimetableScreen.html">
+                        <div class="nav-icon">🏠</div>
+                        <div class="nav-label">Home</div>
+                    </a>
+                    <a class="nav-item" href="../campusScreen/campusmap.html">
+                        <div class="nav-icon">🗺️</div>
+                        <div class="nav-label">Map</div>
+                    </a>
+                    <a class="nav-item" href="../servicepage/servicepage.html">
+                        <div class="nav-icon">🏛️</div>
+                        <div class="nav-label">Service</div>
+                    </a>
+                    <a class="nav-item" href="../polvoassistant/polvoassistant.html">
+                        <div class="nav-icon">🤖</div>
+                        <div class="nav-label">Assistant</div>
+                    </a>
+                    <a class="nav-item active" href="../studyhub/studyhub.html">
+                        <div class="nav-icon">📖</div>
+                        <div class="nav-label">Study</div>
+                    </a>
+                </div>
+            </div>
+            <div class="page-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot purple active"></div>
+            </div>
+        </div>
+
+    </div><!-- end screens-row -->
+</body>
+
+</html>

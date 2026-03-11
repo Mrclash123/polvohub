@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Polvo Hub — Full Prototype</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="TimetableScreen.css">
+</head>
+
+<body>
+
+    <div class="page-title">
+        <h1>🐙 Polvo Hub — Full Prototype</h1>
+        <p>5 screens · Home · Map · Cantina · AI Assistant · NotebookLM Study</p>
+    </div>
+
+    <div class="screens-row">
+
+        <!-- ===== SCREEN 1: HOME ===== -->
+        <div class="phone-wrapper">
+            <div class="screen-label">① Home</div>
+            <div class="phone">
+                <div class="status-bar"><span class="time">09:41</span><span>●●● WiFi 🔋</span></div>
+                <div style="overflow-y:auto;height:calc(620px - 34px - 60px);scrollbar-width:none;">
+                    <div class="header">
+                        <div class="header-top">
+                            <div class="logo">
+                                <div class="logo-icon">🐙</div>
+                                <div class="logo-text">polvo<span>hub</span></div>
+                            </div>
+                            <div class="avatar">ML</div>
+                        </div>
+                        <div class="greeting">Bom dia,</div>
+                        <div class="greeting-name">Maria Lopes 👋</div>
+                    </div>
+                    <div class="content">
+                        <div class="stats-row">
+                            <div class="stat-card">
+                                <div class="stat-icon">📚</div>
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Classes</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🕐</div>
+                                <div class="stat-value">12m</div>
+                                <div class="stat-label">Queue</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">📍</div>
+                                <div class="stat-value">B204</div>
+                                <div class="stat-label">Next room</div>
+                            </div>
+                        </div>
+                        <div class="alert-banner">
+                            <span style="font-size:16px;">⚠️</span>
+                            <div>
+                                <div class="alert-title">Delay — Cálculo II (10h00)</div>
+                                <div class="alert-body">Prof. Santos will be 15 min late. Room B204 confirmed.</div>
+                            </div>
+                        </div>
+                        <div class="section-title">Today's Schedule <a href="#">View all</a></div>
+                        <div class="schedule-list">
+                            <div class="schedule-item ongoing">
+                                <div class="schedule-time">09:00<br>10:30</div>
+                                <div class="schedule-info">
+                                    <div class="schedule-name">Eng. de Software</div>
+                                    <div class="schedule-room">📍 Edif. A · A101</div>
+                                </div>
+                                <span class="badge live">● Live</span>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">10:00<br>11:30</div>
+                                <div class="schedule-info">
+                                    <div class="schedule-name">Cálculo II</div>
+                                    <div class="schedule-room">📍 Edif. B · B204</div>
+                                </div>
+                                <span class="badge delay">+15 min</span>
+                            </div>
+                            <div class="schedule-item cancelled">
+                                <div class="schedule-time">14:00<br>15:30</div>
+                                <div class="schedule-info">
+                                    <div class="schedule-name">Física Aplicada</div>
+                                    <div class="schedule-room">📍 Edif. C · C302</div>
+                                </div>
+                                <span class="badge cancelled">Cancelled</span>
+                            </div>
+                        </div>
+                        <div class="section-title">Cantina</div>
+                        <div class="cantina-card">
+                            <div class="cantina-top">
+                                <div>
+                                    <div class="cantina-title">Cantina Central</div>
+                                    <div class="cantina-time">Open · 12:00–14:30</div>
+                                </div>
+                                <div style="text-align:right;">
+                                    <div class="q-num">12</div>
+                                    <div class="q-lab">in queue</div>
+                                </div>
+                            </div>
+                            <div class="menu-chips">
+                                <div class="menu-chip">
+                                    <div class="chip-name">Frango Assado</div>
+                                    <div>Arroz & salada</div>
+                                    <div class="chip-price">2.60€</div>
+                                </div>
+                                <div class="menu-chip">
+                                    <div class="chip-name">Bacalhau</div>
+                                    <div>Com broa</div>
+                                    <div class="chip-price">2.80€</div>
+                                </div>
+                            </div>
+                            <button class="reserve-btn">🍽️ Reserve a Meal</button>
+                        </div>
+                        <!-- AI shortcut -->
+                        <div class="section-title">Quick Ask</div>
+                        <div
+                            style="background:linear-gradient(135deg,#1a2744,#2d5be3);border-radius:13px;padding:12px;display:flex;gap:10px;align-items:center;cursor:pointer;">
+                            <div
+                                style="width:34px;height:34px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">
+                                🐙</div>
+                            <div style="flex:1;">
+                                <div style="font-size:11px;font-weight:700;color:white;margin-bottom:2px;">Ask Polvo
+                                    Assistant</div>
+                                <div style="font-size:9px;color:rgba(255,255,255,0.5);">"Is the cantina busy now?"</div>
+                            </div>
+                            <div style="color:rgba(255,255,255,0.4);font-size:14px;">›</div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="bottom-nav">
+            <a class="nav-item" href="../timetable/TimetableScreen.html">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Home</div>
+            </a>
+            <a class="nav-item" href="../campusScreen/campusmap.html">
+                <div class="nav-icon">🗺️</div>
+                <div class="nav-label">Map</div>
+            </a>
+            <a class="nav-item" href="../servicepage/servicepage.html">
+                <div class="nav-icon">🏛️</div>
+                <div class="nav-label">Service</div>
+            </a>
+            <a class="nav-item" href="../polvoassistant/polvoassistant.html">
+                <div class="nav-icon">🤖</div>
+                <div class="nav-label">Assistant</div>
+            </a>
+            <a class="nav-item active" href="../studyhub/studyhub.html">
+                <div class="nav-icon">📖</div>
+                <div class="nav-label">Study</div>
+            </a>
+        </div>
+            </div>
+
+        </div><!-- /screens-row -->
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Polvo Hub — Full Prototype</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="polvoassistant.css">
+</head>
+
+<body>
+
+    <div class="page-title">
+        <h1>🐙 Polvo Hub — Full Prototype</h1>
+        <p>5 screens · Home · Map · Cantina · AI Assistant · NotebookLM Study</p>
+    </div>
+
+    <div class="screens-row">
+
+        <!-- ===== SCREEN 4: AI CHATBOT ===== -->
+        <div class="phone-wrapper">
+            <div class="screen-label">④ Polvo Assistant (AI)</div>
+            <div class="phone">
+                <div class="status-bar"><span class="time">09:41</span><span>●●● WiFi 🔋</span></div>
+                <div class="chat-header">
+                    <div class="chat-avatar">🐙</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Polvo Assistant</div>
+                        <div class="chat-status"><span class="online-dot"></span> Online · Powered by AI</div>
+                    </div>
+                </div>
+                <div class="chat-body">
+                    <div class="msg bot">
+                        <div class="msg-bubble">Olá Maria! 👋 I'm Polvo, your campus AI. Ask me anything about your
+                            schedule, the cantina, rooms, or campus life!</div>
+                        <div class="msg-time">09:38</div>
+                    </div>
+                    <div class="msg user">
+                        <div class="msg-bubble">Is the cantina busy right now?</div>
+                        <div class="msg-time">09:39</div>
+                    </div>
+                    <div class="msg bot">
+                        <div class="msg-bubble">🍽️ There are currently <strong>12 people</strong> in the queue at
+                            Cantina Central — about a <strong>12 min wait</strong>. Capacity is at 68%.<br><br>Best time
+                            to go: after <strong>13h15</strong> when it tends to be quieter. Want me to reserve you a
+                            meal now?</div>
+                        <div class="msg-time">09:39</div>
+                    </div>
+                    <div class="msg user">
+                        <div class="msg-bubble">Where is my next class?</div>
+                        <div class="msg-time">09:40</div>
+                    </div>
+                    <div class="msg bot">
+                        <div class="msg-bubble">📍 Your next class is <strong>Cálculo II</strong> at 10h00 in
+                            <strong>Edifício B, room B204</strong>.<br><br>⚠️ Heads up — Prof. Santos is running
+                            <strong>15 minutes late</strong> today. You have a bit more time!
+                        </div>
+                        <div class="msg-time">09:40</div>
+                    </div>
+                    <div class="bot-typing">
+                        <div class="dot-pulse"></div>
+                        <div class="dot-pulse"></div>
+                        <div class="dot-pulse"></div>
+                    </div>
+                </div>
+                <div class="quick-chips">
+                    <div class="quick-chip">📚 Free rooms?</div>
+                    <div class="quick-chip">🍽️ Today's menu</div>
+                    <div class="quick-chip">📅 My schedule</div>
+                </div>
+                <div class="chat-input-bar">
+                    <input class="chat-input" type="text" placeholder="Ask Polvo anything...">
+                    <button class="send-btn">➤</button>
+                </div>
+                <div class="bottom-nav">
+                    <a class="nav-item" href="../timetable/TimetableScreen.html">
+                        <div class="nav-icon">🏠</div>
+                        <div class="nav-label">Home</div>
+                    </a>
+                    <a class="nav-item" href="../campusScreen/campusmap.html">
+                        <div class="nav-icon">🗺️</div>
+                        <div class="nav-label">Map</div>
+                    </a>
+                    <a class="nav-item" href="../servicepage/servicepage.html">
+                        <div class="nav-icon">🏛️</div>
+                        <div class="nav-label">Service</div>
+                    </a>
+                    <a class="nav-item" href="../polvoassistant/polvoassistant.html">
+                        <div class="nav-icon">🤖</div>
+                        <div class="nav-label">Assistant</div>
+                    </a>
+                    <a class="nav-item active" href="../studyhub/studyhub.html">
+                        <div class="nav-icon">📖</div>
+                        <div class="nav-label">Study</div>
+                    </a>
+                </div>
+            </div>
+            <div class="page-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+    </div><!-- /screens-row -->
+
+</body>
+
+</html>

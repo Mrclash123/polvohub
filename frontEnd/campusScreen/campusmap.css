@@ -1,0 +1,253 @@
+:root {
+    --navy: #1a2744;
+    --navy-light: #253559;
+    --blue: #2d5be3;
+    --blue-light: #4a74f5;
+    --teal: #1fa89c;
+    --teal-light: #e6f7f6;
+    --bg: #f4f6fb;
+    --white: #ffffff;
+    --text: #1a2744;
+    --text-muted: #6b7a99;
+    --border: #e2e7f0;
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --card: #ffffff;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ─── DESKTOP: prototype frame ─── */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #cdd5e8;
+    min-height: 100vh;
+    padding: 40px 24px 60px;
+}
+
+.page-title { text-align: center; margin-bottom: 36px; }
+.page-title h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--navy); margin-bottom: 6px;
+}
+.page-title p { font-size: 14px; color: #5a6a8a; }
+
+.screens-row {
+    display: flex; gap: 28px;
+    justify-content: center; flex-wrap: wrap; align-items: flex-start;
+}
+
+.phone-wrapper {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+
+.screen-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #4a5a7a; background: rgba(255,255,255,0.75);
+    padding: 5px 14px; border-radius: 20px; backdrop-filter: blur(8px);
+}
+
+.phone {
+    width: 300px; height: 620px;
+    background: var(--bg); border-radius: 38px; overflow: hidden;
+    box-shadow: 0 28px 72px rgba(26,39,68,0.24), 0 4px 16px rgba(26,39,68,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+    position: relative; border: 3px solid rgba(255,255,255,0.95);
+}
+
+.page-dots { display: flex; gap: 5px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+.dot.active { background: var(--blue); width: 16px; border-radius: 3px; }
+
+/* ─── Shared components ─── */
+.status-bar {
+    height: 34px; background: var(--navy);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 18px; color: white; font-size: 10px; font-weight: 500; flex-shrink: 0;
+}
+.status-bar .time { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 11px; }
+
+.bottom-nav {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 60px; background: var(--white);
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 0 4px 6px; z-index: 50;
+}
+.nav-item {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 2px; cursor: pointer; padding: 6px 10px; border-radius: 10px;
+}
+.nav-item.active { background: #eff3ff; }
+.nav-icon { font-size: 18px; }
+.nav-label { font-size: 8px; font-weight: 500; color: var(--text-muted); }
+.nav-item.active .nav-label { color: var(--blue); font-weight: 700; }
+
+/* ─── Map screen ─── */
+.map-wrap {
+    height: 300px; background: #e8eef4;
+    position: relative; overflow: hidden; flex-shrink: 0;
+}
+.map-grid {
+    position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(45,91,227,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,91,227,0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+.road-h { position: absolute; height: 12px; background: #cdd5e4; left: 0; right: 0; }
+.road-v { position: absolute; width: 12px; background: #cdd5e4; top: 0; bottom: 0; }
+.bldg {
+    position: absolute; background: white;
+    border: 1.5px solid #b8c4d8; border-radius: 6px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 8px; font-weight: 700; color: var(--navy);
+    cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    text-align: center; padding: 3px; line-height: 1.3;
+}
+.bldg.sel { background: var(--blue); color: white; border-color: var(--blue); }
+.bldg.lib { background: #f0fdf4; border-color: var(--teal); }
+.bldg.caf { background: #fff7ed; border-color: var(--amber); }
+.map-pin {
+    position: absolute; width: 14px; height: 14px;
+    background: var(--blue); border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg); border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(45,91,227,0.5); z-index: 20;
+}
+.pin-label {
+    position: absolute; background: var(--navy);
+    color: white; font-size: 8px; font-weight: 700;
+    padding: 2px 7px; border-radius: 7px; z-index: 21; white-space: nowrap;
+}
+.map-ctrl {
+    position: absolute; right: 10px; top: 10px;
+    display: flex; flex-direction: column; gap: 4px; z-index: 30;
+}
+.map-btn {
+    width: 28px; height: 28px; background: white;
+    border: 1px solid var(--border); border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.map-search {
+    position: absolute; top: 10px; left: 10px; right: 48px;
+    background: white; border-radius: 11px; padding: 7px 11px;
+    display: flex; align-items: center; gap: 7px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 30;
+}
+.map-search input {
+    border: none; outline: none; font-size: 10px;
+    color: var(--navy); width: 100%; font-family: 'DM Sans', sans-serif;
+}
+.room-panel { padding: 12px 14px; }
+.room-panel-title {
+    font-family: 'Sora', sans-serif; font-size: 12px;
+    font-weight: 700; color: var(--navy); margin-bottom: 8px;
+}
+.room-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.room-chip {
+    background: #f8fafc; border: 1.5px solid var(--border);
+    border-radius: 9px; padding: 7px 5px;
+    text-align: center; font-size: 9px; font-weight: 700; color: var(--navy); cursor: pointer;
+}
+.room-chip.occ { background: #fee2e2; border-color: #fca5a5; color: #b91c1c; }
+.room-chip.free { background: #dcfce7; border-color: #86efac; color: #15803d; }
+.room-chip.mine { background: #dbeafe; border-color: #93c5fd; color: #1e40af; }
+.room-sub { font-size: 7px; font-weight: 400; margin-top: 1px; }
+
+/* ─── MOBILE: full-screen native feel ─── */
+@media (max-width: 600px) {
+
+    body {
+        background: var(--bg);
+        padding: 0;
+        min-height: 100dvh;
+        overflow-x: hidden;
+    }
+
+    /* Hide prototype chrome */
+    .page-title,
+    .screen-label,
+    .page-dots { display: none; }
+
+    .screens-row {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100vw;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+    .screens-row::-webkit-scrollbar { display: none; }
+
+    .phone-wrapper {
+        scroll-snap-align: start;
+        flex: 0 0 100vw;
+        width: 100vw;
+        min-height: 100dvh;
+        gap: 0;
+    }
+
+    .phone {
+        width: 100vw;
+        height: 100dvh;
+        min-height: 100dvh;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Status bar safe area */
+    .status-bar {
+        min-height: 44px;
+        height: calc(44px + env(safe-area-inset-top, 0px));
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-shrink: 0;
+    }
+
+    /* Map fills remaining space above bottom nav */
+    .map-wrap {
+        flex: 1;
+        height: auto;
+        min-height: 0;
+    }
+
+    /* Scale map elements relative to screen width */
+    .bldg { font-size: calc(8px + 0.5vw); }
+    .map-search { top: 12px; left: 12px; right: 52px; padding: 9px 13px; }
+    .map-search input { font-size: 12px; }
+    .map-ctrl { right: 12px; top: 12px; }
+    .map-btn { width: 36px; height: 36px; font-size: 16px; border-radius: 10px; }
+
+    /* Room panel auto-sized */
+    .room-panel { padding: 14px 16px; flex-shrink: 0; }
+    .room-panel-title { font-size: 14px; margin-bottom: 10px; }
+    .room-grid { gap: 8px; }
+    .room-chip { padding: 10px 5px; font-size: 11px; border-radius: 11px; }
+    .room-sub { font-size: 8px; }
+
+    /* Bottom nav safe area */
+    .bottom-nav {
+        position: relative;
+        height: calc(60px + env(safe-area-inset-bottom, 0px));
+        padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        flex-shrink: 0;
+    }
+
+    .nav-item { padding: 8px 14px; }
+    .nav-icon { font-size: 22px; }
+    .nav-label { font-size: 9px; }
+}
